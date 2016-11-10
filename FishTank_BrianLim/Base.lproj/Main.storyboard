@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FishTank_BrianLim" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="1" maxValue="21" translatesAutoresizingMaskIntoConstraints="NO" id="sAJ-XT-7W4">
+                                <rect key="frame" x="18" y="20" width="284" height="31"/>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5J4-Y1-fL9">
+                                <rect key="frame" x="20" y="58" width="74" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="animate" image="TapToStart">
+                                    <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="animate:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mf9-Sn-7rl"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q8G-kI-0Il">
+                                <rect key="frame" x="0.0" y="271" width="64" height="44"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="sAJ-XT-7W4" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0Rm-0v-aCb"/>
+                            <constraint firstItem="q8G-kI-0Il" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L26-Ot-xiA"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="sAJ-XT-7W4" secondAttribute="leading" id="jx0-3Y-Fd1"/>
+                            <constraint firstItem="q8G-kI-0Il" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lz9-dg-1Bp"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sAJ-XT-7W4" secondAttribute="trailing" id="u4k-hQ-Vzq"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="goldenFish" destination="q8G-kI-0Il" id="fwv-Rf-e10"/>
+                        <outlet property="number" destination="sAJ-XT-7W4" id="N0H-z4-lJ0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="74" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="TapToStart" width="142" height="94"/>
+    </resources>
+</document>
